@@ -2,6 +2,7 @@ let blobs = new Array();
 let curInterval;
 const canvas = document.getElementById("myCanvas");
 const context = canvas.getContext("2d")
+const colors = new Array("blue","yellow","orange","green", "red");
 
 function canvasDraw() {
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -11,7 +12,12 @@ function canvasDraw() {
     })
 }
 
+function randomChoice(arr){
+    return arr[Math.floor(Math.random() * arr.length)]
+}
+
 function validateBlobSubmission() {
+    // bug: when adding a new blob, the color is changed on existing blobs as well
     let text;
 
     const blobSize = document.getElementById("size").value;

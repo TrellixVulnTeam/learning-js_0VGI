@@ -1,6 +1,6 @@
 class Clock {
     constructor() {
-        this.partytime;
+        this.partytime = 0;
         this.timeOfDay;
 
         this.wakeup = 6;
@@ -79,11 +79,25 @@ class Clock {
         timeMessage.innerHTML = message;
         this.showCurrentTime();
     }
+    partyEvent (partyButton){
+        if (this.partytime < 0){
+            this.partytime = new Date().getHours();
+            partyButton.innerText = "Party is over!"
+            partyButton.style.backgroundColor = "#0A8DAB";
+        } else{
+            this.partytime = -1;
+            partyButton.innerText = "Party!"
+            partyButton.style.backgroundColor = "#222";
+        }
+    }
 
 }
 
 const newClock = new Clock();
 newClock.updateClock();
+
+let partyTimeButton = document.getElementById("partyTimeButton");
+partyTimeButton.addEventListener("click", function(){newClock.partyEvent(partyTimeButton)});
 
 let wakeUpTimeSelector = document.getElementById("wakeUpTimeSelector");
 let wakeUpEvent = function(){

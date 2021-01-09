@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌼 Namnsdag</title>
+</head>
+
+<body>
+    <main>
+        <div class="left">
+            <div class="name-section">
+                <ul class="name-list-0">  
+                    <!-- Javascript content here -->
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <nav>
+                <ul class="nav-list-0">
+                    <li><a class="home-link-0" href="#">Hemma</a></li>
+                    <li><a class="about-link-0" href="#">Om sidan</a></li>
+                </ul>
+            </nav>
+            <div class="fact-section">
+                <div class="fact-content"></div>
+            </div>
+            <footer class="footnote">
+                2021, Created by Ben Kooijman with ❤️
+            </footer>
+        </div>
+
+        <div class="about-main">
+                <div class="lslider">
+                    <div class="name-container">
+                    <h1><span class="bgtext">Om sidan</span></h1>
+                </div>
+                </div>
+                <div class="rslider">
+                    <nav>
+                        <ul class="nav-list-1">
+                            <li><a class="home-link-1" href="#"><span class="bgtext">Hemma</span></a></li>
+                            <li><a class="about-link-1" href="#"><span class="bgtext">Om sidan</span></a></li>
+                        </ul>
+                    </nav>
+                    <div class="name-container">
+                    <div class="name-section about-text">
+                        <span class="bgtext">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e
+                        x ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </span>
+                        <hr class="black"></hr>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="intro-main">
+            <div class="intro-section">
+                <div class="intro-content">
+                    <div class="hide">
+                        <h1><span class="bgtext intro-text">Dagens namnsdag är...</span></h1>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+            crossorigin="anonymous"></script>
+        <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    </main>
+</body>
+
+</html>

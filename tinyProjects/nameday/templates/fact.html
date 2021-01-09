@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nameday</title>
+</head>
+
+<body>
+    <main class="main-fact" data-router-wrapper>
+        <section data-router-view="fact">
+            <div class="fact-section">
+                <div class="fact-content">
+                    {{ trivia }}
+                </div>
+            </div>
+        </section>
+        <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    </main>
+</body>
+
+</html>

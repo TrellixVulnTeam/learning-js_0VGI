@@ -14,6 +14,9 @@ soup = w.get_soup()
 
 @app.route("/names")
 def names():
+    """
+        Function API for serving data to JS
+    """
     names = w.get_names_per_month(soup)
 
     now = datetime.now()

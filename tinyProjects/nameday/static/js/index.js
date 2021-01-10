@@ -31,7 +31,6 @@ function backToLanding() {
 }
 
 function fetchAPIEnpoint(path) {
-    // GET is the default method, so we don't need to set it
     return fetch(path,
         {
             method: "GET",
